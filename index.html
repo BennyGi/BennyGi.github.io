@@ -173,18 +173,35 @@
 
    <!-- Project 1 -->
    <div class="project">
+      <h3>Daily News Quiz Application</h3>
+      <p>
+         • A web application that generates daily quizzes based on real-time news.<br>
+         – <b>Backend:</b> .NET Core Web API (C#) with OpenAI API; data persisted in JSON.<br>
+         – <b>Frontend:</b> React (JavaScript, HTML5, CSS3).<br>
+         – <b>Automation & Ops:</b> Scheduled daily refresh with Windows Task Scheduler; basic DevOps practices (env separation, logging).<br>
+         – <b>Outcome:</b> Auto-creates 5 new questions every day with results tracking and a responsive UI.
+      </p>
+
+      <button onclick="toggleGallery('quiz-gallery', this)">Show screenshots of project</button>
+      <div id="quiz-gallery" class="gallery">
+         <img src="Screenshot 2025-08-18 170033.png" alt="News Quiz Screenshot 1" onclick="openLightbox(this)">
+         <img src="Screenshot 2025-08-18 170328.png" alt="News Quiz Screenshot 2" onclick="openLightbox(this)">
+         <img src="Screenshot 2025-08-18 170341.png" alt="News Quiz Screenshot 3" onclick="openLightbox(this)">
+         <img src="Screenshot 2025-08-18 170349.png" alt="News Quiz Screenshot 4" onclick="openLightbox(this)">
+      </div>
+   </div>
+
+   <!-- Project 2 -->
+   <div class="project">
       <h3>Connect Four Game</h3>
       <p>
-        <b>Daily News Quiz Application</b>
-A web application that generates daily quizzes based on real-time news.
-– Backend: .NET Core Web API (C#) with OpenAI API; data persisted in JSON.
-– Frontend: React (JavaScript, HTML5, CSS3).
-– Automation & Ops: Scheduled daily refresh with Windows Task Scheduler; basic DevOps practices (env separation, logging).
-– Outcome: Auto-creates 5 new questions every day with results tracking and a responsive UI.
-      <p><b>Technologies:</b> C#, .NET 8, WPF, EF Core, SQL Server, REST API, Razor Pages, Aspire</p>
+         • A full Connect Four system using .NET and C#.<br>
+         – Implemented game logic with multiple difficulty levels (Easy, Normal, Hard) using Minimax + Alpha-Beta Pruning.<br>
+         – Built a desktop UI in WPF (XAML + C#) with smooth interactions.<br>
+         – Applied OOP, data structures, and heuristics for efficient move evaluation.
+      </p>
 
       <button onclick="toggleGallery('cf-gallery', this)">Show screenshots of project</button>
-
       <div id="cf-gallery" class="gallery">
          <img src="Screenshot 2025-08-18 162042.png" alt="Connect Four Screenshot 1" onclick="openLightbox(this)">
          <img src="Screenshot 2025-08-18 162106.png" alt="Connect Four Screenshot 2" onclick="openLightbox(this)">
@@ -196,40 +213,21 @@ A web application that generates daily quizzes based on real-time news.
       </div>
    </div>
 
-   <!-- Project 2 -->
-   <div class="project">
-      <h3>Daily News Quiz</h3>
-      <p>
-         Interactive quiz website that generates 5 new questions every day using the OpenAI API
-         and Israeli news sources. Built as a React web app with AI backend.
-      </p>
-      <p><b>Technologies:</b> React, JavaScript, OpenAI API, JSON, Data Analysis</p>
-
-      <button onclick="toggleGallery('quiz-gallery', this)">Show screenshots of project</button>
-
-      <div id="quiz-gallery" class="gallery">
-         <img src="Screenshot 2025-08-18 170033.png" alt="News Quiz Screenshot 1" onclick="openLightbox(this)">
-         <img src="Screenshot 2025-08-18 170328.png" alt="News Quiz Screenshot 2" onclick="openLightbox(this)">
-         <img src="Screenshot 2025-08-18 170341.png" alt="News Quiz Screenshot 3" onclick="openLightbox(this)">
-         <img src="Screenshot 2025-08-18 170349.png" alt="News Quiz Screenshot 4" onclick="openLightbox(this)">
-      </div>
-   </div>
-
    <!-- CYBERSECURITY PROJECTS -->
    <h3 style="color:#005a9e; margin-top:30px;"> Cybersecurity Projects</h3>
 
    <!-- Cyber Project 1 -->
    <div class="project">
-      <h3>Basic Web Vulnerability Scanner (SQLi & XSS)</h3>
+      <h3>Basic Web Vulnerability Scanner (Lab-Only)</h3>
       <p>
-         Python-based lab tool that detects basic <b>SQL Injection</b> and <b>Reflected XSS</b> in
-         OWASP Juice Shop. The scanner sends safe probes, compares response length, looks for DB
-         error fingerprints, and flags suspicious reflections — all in a safe, non-destructive way.
+         • Small Python utility that probes deliberately vulnerable targets (OWASP Juice Shop / DVWA) for reflected XSS and basic SQLi indicators.<br>
+         – Implemented safe probing with Python (<code>requests</code>), baseline comparisons, and simple error-fingerprint heuristics (e.g., “SQL syntax”, “near '”).<br>
+         – Added reflected-XSS checks using a unique token echoed back unescaped in responses.<br>
+         – Ran against Dockerized lab targets; produced concise console output with evidence and risk hints (e.g., length deltas, fingerprints).<br>
+         – <b>Focus:</b> ethical testing, clear reporting, and extensible design (CLI/report export planned).
       </p>
-      <p><b>Technologies:</b> Python, Requests, Docker (Juice Shop), GitHub</p>
 
       <button onclick="toggleGallery('cyber-gallery', this)">Show screenshots of project</button>
-
       <div id="cyber-gallery" class="gallery">
          <img src="תצלום מסך 1.png" alt="Cyber Project Screenshot 1" onclick="openLightbox(this)">
          <img src="תצלום מסך 2.png" alt="Cyber Project Screenshot 2" onclick="openLightbox(this)">
@@ -238,6 +236,7 @@ A web application that generates daily quizzes based on real-time news.
    </div>
 
 </section>
+
 
 
    <!-- CONTACT -->
@@ -293,5 +292,6 @@ A web application that generates daily quizzes based on real-time news.
 </body>
 
 </html>
+
 
 
