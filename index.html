@@ -60,7 +60,7 @@
          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       }
 
-      /* גלריה מוסתרת כברירת מחדל */
+      
       .gallery {
          display: none;
          margin-top: 15px;
@@ -124,7 +124,7 @@
             cursor: pointer;
          }
 
-      /* כפתור X לסגירה */
+      
       .close-btn {
          position: absolute;
          top: 20px;
@@ -164,53 +164,77 @@
       </p>
    </section>
 
-   <!-- PROJECTS -->
-   <section id="projects">
-      <h2>Projects</h2>
+  <!-- PROJECTS -->
+<section id="projects">
+   <h2>Projects</h2>
 
-      <!-- Project 1 -->
-      <div class="project">
-         <h3>Connect Four Game</h3>
-         <p>
-            Developed a full-stack Connect Four multiplayer game using .NET 8 with microservices architecture, implementing Aspire orchestration, RESTful APIs, real-time web communication, and clean separation of concerns across multiple interconnected services.
-         </p>
-         <p><b>Technologies:</b> C#, .NET 8, WPF, EF Core, SQL Server, REST API, Razor Pages, Aspire</p>
+   <!-- FULLSTACK PROJECTS -->
+   <h3 style="color:#005a9e; margin-top:30px;"> Fullstack Projects</h3>
 
-         <!-- כפתור -->
-         <button onclick="toggleGallery('cf-gallery', this)">Show screenshots of project</button>
+   <!-- Project 1 -->
+   <div class="project">
+      <h3>Connect Four Game</h3>
+      <p>
+         Developed a full-stack Connect Four multiplayer game using .NET 8 with microservices architecture, implementing Aspire orchestration, RESTful APIs, real-time web communication, and clean separation of concerns across multiple interconnected services.
+      </p>
+      <p><b>Technologies:</b> C#, .NET 8, WPF, EF Core, SQL Server, REST API, Razor Pages, Aspire</p>
 
-         <!-- גלריה -->
-         <div id="cf-gallery" class="gallery">
-            <img src="Screenshot 2025-08-18 162042.png" alt="Connect Four Screenshot 1" onclick="openLightbox(this)">
-            <img src="Screenshot 2025-08-18 162106.png" alt="Connect Four Screenshot 2" onclick="openLightbox(this)">
-            <img src="Screenshot 2025-08-18 162118.png" alt="Connect Four Screenshot 3" onclick="openLightbox(this)">
-            <img src="Screenshot 2025-08-18 162154.png" alt="Connect Four Screenshot 4" onclick="openLightbox(this)">
-            <img src="Screenshot 2025-08-18 162258.png" alt="Connect Four Screenshot 5" onclick="openLightbox(this)">
-            <img src="Screenshot 2025-08-18 162302.png" alt="Connect Four Screenshot 6" onclick="openLightbox(this)">
-            <img src="Screenshot 2025-08-18 162316.png" alt="Connect Four Screenshot 7" onclick="openLightbox(this)">
-         </div>
+      <button onclick="toggleGallery('cf-gallery', this)">Show screenshots of project</button>
+
+      <div id="cf-gallery" class="gallery">
+         <img src="Screenshot 2025-08-18 162042.png" alt="Connect Four Screenshot 1" onclick="openLightbox(this)">
+         <img src="Screenshot 2025-08-18 162106.png" alt="Connect Four Screenshot 2" onclick="openLightbox(this)">
+         <img src="Screenshot 2025-08-18 162118.png" alt="Connect Four Screenshot 3" onclick="openLightbox(this)">
+         <img src="Screenshot 2025-08-18 162154.png" alt="Connect Four Screenshot 4" onclick="openLightbox(this)">
+         <img src="Screenshot 2025-08-18 162258.png" alt="Connect Four Screenshot 5" onclick="openLightbox(this)">
+         <img src="Screenshot 2025-08-18 162302.png" alt="Connect Four Screenshot 6" onclick="openLightbox(this)">
+         <img src="Screenshot 2025-08-18 162316.png" alt="Connect Four Screenshot 7" onclick="openLightbox(this)">
       </div>
+   </div>
 
-      <!-- Project 2 -->
-      <div class="project">
-         <h3>Daily News Quiz</h3>
-         <p>
-            Interactive quiz website that generates 5 new questions every day using the OpenAI API
-            and Israeli news sources. Built as a React web app with AI backend.
-         </p>
-         <p><b>Technologies:</b> React, JavaScript, OpenAI API, JSON, Data Analysis</p>
+   <!-- Project 2 -->
+   <div class="project">
+      <h3>Daily News Quiz</h3>
+      <p>
+         Interactive quiz website that generates 5 new questions every day using the OpenAI API
+         and Israeli news sources. Built as a React web app with AI backend.
+      </p>
+      <p><b>Technologies:</b> React, JavaScript, OpenAI API, JSON, Data Analysis</p>
 
-         <button onclick="toggleGallery('quiz-gallery', this)">Show screenshots of project</button>
+      <button onclick="toggleGallery('quiz-gallery', this)">Show screenshots of project</button>
 
-
-         <div id="quiz-gallery" class="gallery">
-            <img src="Screenshot 2025-08-18 170033.png" alt="News Quiz Screenshot 1" onclick="openLightbox(this)">
-            <img src="Screenshot 2025-08-18 170328.png" alt="News Quiz Screenshot 2" onclick="openLightbox(this)">
-            <img src="Screenshot 2025-08-18 170341.png" alt="News Quiz Screenshot 3" onclick="openLightbox(this)">
-            <img src="Screenshot 2025-08-18 170349.png" alt="News Quiz Screenshot 4" onclick="openLightbox(this)">
-         </div>
+      <div id="quiz-gallery" class="gallery">
+         <img src="Screenshot 2025-08-18 170033.png" alt="News Quiz Screenshot 1" onclick="openLightbox(this)">
+         <img src="Screenshot 2025-08-18 170328.png" alt="News Quiz Screenshot 2" onclick="openLightbox(this)">
+         <img src="Screenshot 2025-08-18 170341.png" alt="News Quiz Screenshot 3" onclick="openLightbox(this)">
+         <img src="Screenshot 2025-08-18 170349.png" alt="News Quiz Screenshot 4" onclick="openLightbox(this)">
       </div>
-   </section>
+   </div>
+
+   <!-- CYBERSECURITY PROJECTS -->
+   <h3 style="color:#005a9e; margin-top:30px;"> Cybersecurity Projects</h3>
+
+   <!-- Cyber Project 1 -->
+   <div class="project">
+      <h3>Basic Web Vulnerability Scanner (SQLi & XSS)</h3>
+      <p>
+         Python-based lab tool that detects basic <b>SQL Injection</b> and <b>Reflected XSS</b> in
+         OWASP Juice Shop. The scanner sends safe probes, compares response length, looks for DB
+         error fingerprints, and flags suspicious reflections — all in a safe, non-destructive way.
+      </p>
+      <p><b>Technologies:</b> Python, Requests, Docker (Juice Shop), GitHub</p>
+
+      <button onclick="toggleGallery('cyber-gallery', this)">Show screenshots of project</button>
+
+      <div id="cyber-gallery" class="gallery">
+         <img src="screenshot1.png" alt="Cyber Project Screenshot 1" onclick="openLightbox(this)">
+         <img src="screenshot2.png" alt="Cyber Project Screenshot 2" onclick="openLightbox(this)">
+         <img src="screenshot3.png" alt="Cyber Project Screenshot 3" onclick="openLightbox(this)">
+      </div>
+   </div>
+
+</section>
+
 
    <!-- CONTACT -->
    <section id="contact">
@@ -263,4 +287,5 @@
       });
    </script>
 </body>
+
 </html>
