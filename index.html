@@ -50,6 +50,8 @@
       h2 {
          color: #0078d7;
          margin-bottom: 10px;
+         border-bottom: 2px solid #0078d7;
+         padding-bottom: 5px;
       }
 
       .project {
@@ -60,7 +62,6 @@
          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       }
 
-      
       .gallery {
          display: none;
          margin-top: 15px;
@@ -124,7 +125,6 @@
             cursor: pointer;
          }
 
-      
       .close-btn {
          position: absolute;
          top: 20px;
@@ -139,6 +139,36 @@
          .close-btn:hover {
             opacity: 0.7;
          }
+
+      /* Accordion style */
+      .accordion {
+         background-color: #0078d7;
+         color: white;
+         cursor: pointer;
+         padding: 14px;
+         width: 100%;
+         text-align: left;
+         border: none;
+         outline: none;
+         transition: background-color 0.2s ease;
+         margin-top: 10px;
+         border-radius: 5px;
+         font-size: 16px;
+      }
+      .accordion:hover {
+         background-color: #005a9e;
+      }
+      .panel {
+         padding: 0 18px;
+         display: none; /* מוסתר כברירת מחדל */
+         overflow: hidden;
+         background-color: #f9f9f9;
+         border-left: 2px solid #0078d7;
+         border-right: 2px solid #0078d7;
+         border-bottom: 2px solid #0078d7;
+         border-radius: 0 0 5px 5px;
+         margin-bottom: 15px;
+      }
    </style>
 </head>
 <body>
@@ -164,85 +194,88 @@
       </p>
    </section>
 
-  <!-- PROJECTS -->
-<section id="projects">
-   <h2>Projects</h2>
+   <!-- PROJECTS -->
+   <section id="projects">
+      <h2>Projects</h2>
 
-   <!-- FULLSTACK PROJECTS -->
-   <h3 style="color:#005a9e; margin-top:30px;"> Fullstack Projects</h3>
+      <!-- FULLSTACK PROJECTS -->
+      <button class="accordion">Fullstack Projects</button>
+      <div class="panel">
 
-   <!-- Project 1 -->
-   <div class="project">
-      <h3>Daily News Quiz Application</h3>
-      <p>
-         • A web application that generates daily quizzes based on real-time news.<br>
-         – <b>Backend:</b> .NET Core Web API (C#) with OpenAI API; data persisted in JSON.<br>
-         – <b>Frontend:</b> React (JavaScript, HTML5, CSS3).<br>
-         – <b>Automation & Ops:</b> Scheduled daily refresh with Windows Task Scheduler; basic DevOps practices (env separation, logging).<br>
-         – <b>Outcome:</b> Auto-creates 5 new questions every day with results tracking and a responsive UI.
-      </p>
+         <!-- Daily News Quiz -->
+         <div class="project">
+            <h3>Daily News Quiz Application</h3>
+            <p>
+               • A web application that generates daily quizzes based on real-time news.<br>
+               – <b>Backend:</b> .NET Core Web API (C#) with OpenAI API; data persisted in JSON.<br>
+               – <b>Frontend:</b> React (JavaScript, HTML5, CSS3).<br>
+               – <b>Automation & Ops:</b> Scheduled daily refresh with Windows Task Scheduler; basic DevOps practices (env separation, logging).<br>
+               – <b>Outcome:</b> Auto-creates 5 new questions every day with results tracking and a responsive UI.
+            </p>
 
-      <button onclick="toggleGallery('quiz-gallery', this)">Show screenshots of project</button>
-      <div id="quiz-gallery" class="gallery">
-         <img src="Screenshot 2025-08-18 170033.png" alt="News Quiz Screenshot 1" onclick="openLightbox(this)">
-         <img src="Screenshot 2025-08-18 170328.png" alt="News Quiz Screenshot 2" onclick="openLightbox(this)">
-         <img src="Screenshot 2025-08-18 170341.png" alt="News Quiz Screenshot 3" onclick="openLightbox(this)">
-         <img src="Screenshot 2025-08-18 170349.png" alt="News Quiz Screenshot 4" onclick="openLightbox(this)">
+            <button onclick="toggleGallery('quiz-gallery', this)">Show screenshots of project</button>
+            <div id="quiz-gallery" class="gallery">
+               <img src="Screenshot 2025-08-18 170033.png" alt="News Quiz Screenshot 1" onclick="openLightbox(this)">
+               <img src="Screenshot 2025-08-18 170328.png" alt="News Quiz Screenshot 2" onclick="openLightbox(this)">
+               <img src="Screenshot 2025-08-18 170341.png" alt="News Quiz Screenshot 3" onclick="openLightbox(this)">
+               <img src="Screenshot 2025-08-18 170349.png" alt="News Quiz Screenshot 4" onclick="openLightbox(this)">
+            </div>
+         </div>
+
+         <!-- Connect Four -->
+         <div class="project">
+            <h3>Connect Four Game</h3>
+            <p>
+               • A full Connect Four system using .NET and C#.<br>
+               – Implemented game logic with multiple difficulty levels (Easy, Normal, Hard) using Minimax + Alpha-Beta Pruning.<br>
+               – Built a desktop UI in WPF (XAML + C#) with smooth interactions.<br>
+               – Applied OOP, data structures, and heuristics for efficient move evaluation.
+            </p>
+
+            <button onclick="toggleGallery('cf-gallery', this)">Show screenshots of project</button>
+            <div id="cf-gallery" class="gallery">
+               <img src="Screenshot 2025-08-18 162042.png" alt="Connect Four Screenshot 1" onclick="openLightbox(this)">
+               <img src="Screenshot 2025-08-18 162106.png" alt="Connect Four Screenshot 2" onclick="openLightbox(this)">
+               <img src="Screenshot 2025-08-18 162118.png" alt="Connect Four Screenshot 3" onclick="openLightbox(this)">
+               <img src="Screenshot 2025-08-18 162154.png" alt="Connect Four Screenshot 4" onclick="openLightbox(this)">
+               <img src="Screenshot 2025-08-18 162258.png" alt="Connect Four Screenshot 5" onclick="openLightbox(this)">
+               <img src="Screenshot 2025-08-18 162302.png" alt="Connect Four Screenshot 6" onclick="openLightbox(this)">
+               <img src="Screenshot 2025-08-18 162316.png" alt="Connect Four Screenshot 7" onclick="openLightbox(this)">
+            </div>
+         </div>
+
       </div>
-   </div>
 
-   <!-- Project 2 -->
-   <div class="project">
-      <h3>Connect Four Game</h3>
-      <p>
-         • A full Connect Four system using .NET and C#.<br>
-         – Implemented game logic with multiple difficulty levels (Easy, Normal, Hard) using Minimax + Alpha-Beta Pruning.<br>
-         – Built a desktop UI in WPF (XAML + C#) with smooth interactions.<br>
-         – Applied OOP, data structures, and heuristics for efficient move evaluation.
-      </p>
+      <!-- CYBERSECURITY PROJECTS -->
+      <button class="accordion">Cybersecurity Projects</button>
+      <div class="panel">
 
-      <button onclick="toggleGallery('cf-gallery', this)">Show screenshots of project</button>
-      <div id="cf-gallery" class="gallery">
-         <img src="Screenshot 2025-08-18 162042.png" alt="Connect Four Screenshot 1" onclick="openLightbox(this)">
-         <img src="Screenshot 2025-08-18 162106.png" alt="Connect Four Screenshot 2" onclick="openLightbox(this)">
-         <img src="Screenshot 2025-08-18 162118.png" alt="Connect Four Screenshot 3" onclick="openLightbox(this)">
-         <img src="Screenshot 2025-08-18 162154.png" alt="Connect Four Screenshot 4" onclick="openLightbox(this)">
-         <img src="Screenshot 2025-08-18 162258.png" alt="Connect Four Screenshot 5" onclick="openLightbox(this)">
-         <img src="Screenshot 2025-08-18 162302.png" alt="Connect Four Screenshot 6" onclick="openLightbox(this)">
-         <img src="Screenshot 2025-08-18 162316.png" alt="Connect Four Screenshot 7" onclick="openLightbox(this)">
+         <!-- Cyber Project -->
+         <div class="project">
+            <h3>Basic Web Vulnerability Scanner (Lab-Only)</h3>
+            <p>
+               • Small Python utility that probes deliberately vulnerable targets (OWASP Juice Shop / DVWA) for reflected XSS and basic SQLi indicators.<br>
+               – Implemented safe probing with Python (<code>requests</code>), baseline comparisons, and simple error-fingerprint heuristics (e.g., “SQL syntax”, “near '”).<br>
+               – Added reflected-XSS checks by injecting payloads (e.g., &lt;script&gt;alert('XSS')&lt;/script&gt;) and detecting if they are echoed back unescaped.<br>
+               – Ran against Dockerized lab targets; produced concise console output with evidence and risk hints (e.g., length deltas, fingerprints).<br>
+               – <b>Focus:</b> ethical testing, clear reporting, and extensible design (CLI/report export planned).
+            </p>
+
+            <button onclick="toggleGallery('cyber-gallery', this)">Show screenshots of project</button>
+            <div id="cyber-gallery" class="gallery">
+               <img src="תצלום מסך 1.png" alt="Cyber Project Screenshot 1" onclick="openLightbox(this)">
+               <img src="תצלום מסך 2.png" alt="Cyber Project Screenshot 2" onclick="openLightbox(this)">
+               <img src="Screenshot 2025-09-18 181627.png" alt="Cyber Project Screenshot 3" onclick="openLightbox(this)">
+            </div>
+         </div>
+
       </div>
-   </div>
-
-   <!-- CYBERSECURITY PROJECTS -->
-   <h3 style="color:#005a9e; margin-top:30px;"> Cybersecurity Projects</h3>
-
-   <!-- Cyber Project 1 -->
-   <div class="project">
-      <h3>Basic Web Vulnerability Scanner (Lab-Only)</h3>
-      <p>
-         • Small Python utility that probes deliberately vulnerable targets (OWASP Juice Shop / DVWA) for reflected XSS and basic SQLi indicators.<br>
-         – Implemented safe probing with Python (<code>requests</code>), baseline comparisons, and simple error-fingerprint heuristics (e.g., “SQL syntax”, “near '”).<br>
-         – Added reflected-XSS checks using a unique token echoed back unescaped in responses.<br>
-         – Ran against Dockerized lab targets; produced concise console output with evidence and risk hints (e.g., length deltas, fingerprints).<br>
-         – <b>Focus:</b> ethical testing, clear reporting, and extensible design (CLI/report export planned).
-      </p>
-
-      <button onclick="toggleGallery('cyber-gallery', this)">Show screenshots of project</button>
-      <div id="cyber-gallery" class="gallery">
-         <img src="תצלום מסך 1.png" alt="Cyber Project Screenshot 1" onclick="openLightbox(this)">
-         <img src="תצלום מסך 2.png" alt="Cyber Project Screenshot 2" onclick="openLightbox(this)">
-         <img src="Screenshot 2025-09-18 181627.png" alt="Cyber Project Screenshot 3" onclick="openLightbox(this)">
-      </div>
-   </div>
-
-</section>
-
-
+   </section>
 
    <!-- CONTACT -->
    <section id="contact">
       <h2>Contact</h2>
-      <p>Email: <a href="bennygorno@gmail.com">bennygorno@gmail.com</a></p>
+      <p>Email: <a href="mailto:bennygorno@gmail.com">bennygorno@gmail.com</a></p>
       <p>LinkedIn: <a href="https://www.linkedin.com/in/benny-giorno/" target="_blank">https://www.linkedin.com/in/benny-giorno/</a></p>
    </section>
 
@@ -288,10 +321,20 @@
             closeLightbox();
          }
       });
+
+      // Accordion logic
+      let acc = document.getElementsByClassName("accordion");
+      for (let i = 0; i < acc.length; i++) {
+         acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            let panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+               panel.style.display = "none";
+            } else {
+               panel.style.display = "block";
+            }
+         });
+      }
    </script>
 </body>
-
 </html>
-
-
-
