@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benny Giorno - Software Engineer</title>
+    <title>Benny Giorno - Computer Science Student & Developer</title>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
      <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -134,6 +134,8 @@
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+            text-decoration: none;
+            display: inline-block;
         }
 
         .btn-primary:hover {
@@ -150,6 +152,8 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .btn-secondary:hover {
@@ -303,6 +307,7 @@
             transition: all 0.3s ease;
             background: transparent;
             color: #06b6d4;
+            text-decoration: none;
         }
 
         .social-btn:hover {
@@ -686,38 +691,41 @@
             const projects = [
                 {
                     id: 1,
-                    title: 'Daily Quiz Generator',
+                    title: 'NewsQuiz AI',
                     description: 'Smart AI-powered application that generates daily quizzes from real-time news using OpenAI integration',
                     tech: ['.NET Core', 'React', 'OpenAI API', 'TypeScript'],
-                    icon: '📰'
+                    icon: '📰',
+                    link: 'https://github.com/BennyGi/NewsQuizAI'
                 },
                 {
                     id: 2,
                     title: 'Connect Four AI',
                     description: 'Full-featured game with intelligent AI opponent using Minimax algorithm with alpha-beta pruning',
                     tech: ['C#', 'WPF', 'Algorithm Design', 'Game Logic'],
-                    icon: '🎮'
+                    icon: '🎮',
+                    link: 'https://github.com/BennyGi/.NetProject'
                 },
                 {
                     id: 3,
-                    title: 'Security Scanner',
-                    description: 'Advanced vulnerability detection tool for XSS and SQL injection with detailed reporting',
-                    tech: ['Python', 'Security', 'Docker', 'OWASP'],
-                    icon: '🔍'
+                    title: 'B-Recon',
+                    description: 'AI-powered recon toolkit that runs full domain scans and explains the results through an intelligent chat interface.',
+                    tech: ['Python', 'AI Agents', 'Security', 'Linux'],
+                    icon: '🔍',
+                    link: 'https://github.com/BennyGi/B-Recon-AutoRecon'
                 }
             ];
 
             const skills = [
-                { category: 'Frontend', items: ['React', 'TypeScript', 'Tailwind CSS', 'Animation'] },
-                { category: 'Backend', items: ['C#', '.NET Core', 'Node.js', 'APIs'] },
-                { category: 'Databases', items: ['SQL Server', 'MongoDB', 'PostgreSQL', 'Firebase'] },
-                { category: 'Tools', items: ['Git', 'Docker', 'CI/CD', 'DevOps'] }
+                { category: 'Frontend', items: ['React', 'TypeScript', 'Tailwind CSS', 'Animation', 'HTML/CSS'] },
+                { category: 'Backend', items: ['C#', '.NET Core', 'Node.js', 'APIs', 'SQL'] },
+                { category: 'AI & Security', items: ['AI Agents', 'OpenAI Integration', 'Security Scanning', 'Cybersecurity'] },
+                { category: 'Tools & OS', items: ['Git', 'Docker', 'Linux', 'Python', 'DevOps'] }
             ];
 
             const features = [
-                { icon: '⚡', title: 'High Performance', desc: 'Building lightning-fast applications optimized for speed' },
-                { icon: '🧠', title: 'Problem Solver', desc: 'Creative solutions to complex technical challenges' },
-                { icon: '✨', title: 'Clean Code', desc: 'Maintainable, readable, and efficient solutions' }
+                { icon: '⚡', title: 'Computer Science Student', desc: 'Third-year student specializing in .NET and C#' },
+                { icon: '🤖', title: 'AI Enthusiast', desc: 'Passionate about AI Agents and intelligent systems' },
+                { icon: '🔐', title: 'Cybersecurity Focus', desc: 'Growing expertise in security research and tools' }
             ];
 
             return (
@@ -787,29 +795,29 @@
                                     I'm Benny Giorno
                                 </h1>
                                 <p className="text-purple-300 animate-fadeInUp animation-delay-200">
-                                    Full Stack Software Engineer
+                                    Computer Science Student & Developer
                                 </p>
 
                                 <p className="text-gray-300 animate-fadeInUp animation-delay-300">
-                                    Crafting modern, performant applications with cutting-edge technologies. 
-                                    Specializing in C#, .NET, and AI integration. Building tomorrow's solutions today.
+                                    Third-year student with deep expertise in C# and .NET development. 
+                                    Passionate about AI Agents and Cybersecurity. Building intelligent solutions today.
                                 </p>
 
                                 <div className="hero-buttons">
-                                    <button className="btn-primary">Get In Touch</button>
-                                    <button className="btn-secondary">View Work</button>
+                                    <a href="https://github.com/BennyGi" className="btn-primary">GitHub</a>
+                                    <a href="https://www.linkedin.com/in/benny-giorno/" className="btn-secondary">LinkedIn</a>
                                 </div>
 
                                 <div className="hero-social">
-                                    {['⚙️', '🔗', '📧'].map((icon, i) => (
-                                        <button key={i} className="social-btn">{icon}</button>
-                                    ))}
+                                    <a href="https://github.com/BennyGi" className="social-btn" title="GitHub">🔗</a>
+                                    <a href="https://www.linkedin.com/in/benny-giorno/" className="social-btn" title="LinkedIn">💼</a>
+                                    <a href="mailto:bennygorno@gmail.com" className="social-btn" title="Email">📧</a>
                                 </div>
                             </div>
 
                             <div className="hero-image-frame">
-                                <div className="code-block code-block-1">&lt;Component /&gt;</div>
-                                <div className="code-block code-block-2">{"{"}state{"}"}</div>
+                                <div className="code-block code-block-1">C# .NET</div>
+                                <div className="code-block code-block-2">AI Agents</div>
                                 <div className="hero-image-content">
                                     <div className="rotating-circles">
                                         <div className="circle circle-1"></div>
@@ -860,8 +868,8 @@
                                             ))}
                                         </div>
 
-                                        <a href="#" className="project-link">
-                                            View Project →
+                                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
+                                            View on GitHub →
                                         </a>
                                     </div>
                                 ))}
@@ -896,23 +904,23 @@
                     {/* Contact Section */}
                     <section id="contact" className="section-padding contact-section">
                         <div className="container">
-                            <h2 className="section-title gradient-text">Let's Work Together</h2>
+                            <h2 className="section-title gradient-text">Let's Connect</h2>
                             <div className="section-divider"></div>
 
                             <p style={{ fontSize: '1.25rem', color: '#9ca3af', marginBottom: '3rem', maxWidth: '42rem', marginLeft: 'auto', marginRight: 'auto' }}>
-                                I'm always interested in hearing about new projects and opportunities.
-                                Feel free to reach out and let's create something amazing together!
+                                I'm always interested in exploring new opportunities, collaborating on projects, 
+                                and discussing AI, cybersecurity, and cutting-edge technologies.
                             </p>
 
                             <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', marginBottom: '3rem', flexWrap: 'wrap' }}>
                                 <a href="mailto:bennygorno@gmail.com" className="btn-primary">📧 Send Email</a>
-                                <a href="#" className="btn-secondary">View CV</a>
+                                <a href="https://github.com/BennyGi" className="btn-secondary">View GitHub</a>
                             </div>
 
                             <div className="hero-social" style={{ justifyContent: 'center' }}>
-                                {['⚙️', '🔗', '📧'].map((icon, i) => (
-                                    <button key={i} className="social-btn">{icon}</button>
-                                ))}
+                                <a href="https://github.com/BennyGi" className="social-btn" title="GitHub">🔗</a>
+                                <a href="https://www.linkedin.com/in/benny-giorno/" className="social-btn" title="LinkedIn">💼</a>
+                                <a href="mailto:bennygorno@gmail.com" className="social-btn" title="Email">📧</a>
                             </div>
 
                             <p className="footer">© 2025 Benny Giorno. All rights reserved.</p>
@@ -926,5 +934,3 @@
     </script>
 </body>
 </html>
-
-
